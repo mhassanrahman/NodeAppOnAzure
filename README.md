@@ -55,6 +55,8 @@ https://nodeapponazure.azurewebsites.net/
 
 ## Enable Application Insights
 
+- Dashboard > NodeAppOnAzure > NodeAppOnAzure - Application Insights > NodeAppOnAzure | Metrics : Metric: StartupTime
+
 ## Packages
 
 - env: https://github.com/motdotla/dotenv
