@@ -3,6 +3,10 @@
 /**
  * Module dependencies.
  */
+const appInsights = require('applicationinsights');
+appInsights.setup('4f4ce51e-3713-4d40-a611-b0ee74c10106');
+appInsights.start();
+let start = Date.now();
 
 var app = require('../app');
 var debug = require('debug')('nodeapponazure:server');
@@ -87,4 +91,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+  let duration = Date.now() - start;
+  appInsights.defaultClient.trackMetric({ name: 'StartupTime', value: duration });
 }

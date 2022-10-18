@@ -53,8 +53,11 @@ https://nodeapponazure.azurewebsites.net/
     - nodeapponazurestorageapp > Properties > URL = Get the URL of the container
     - nodeapponazurestorageapp > Overview > Change Access Level > Public Access Level: Blob
 
+## Enable Application Insights
+
 ## Packages
 
 - env: https://github.com/motdotla/dotenv
 - mongodb: https://www.npmjs.com/package/mongodb
 - nodemon: https://www.npmjs.com/package/nodemon
+- applicationInsights: https://www.npmjs.com/package/applicationinsights
