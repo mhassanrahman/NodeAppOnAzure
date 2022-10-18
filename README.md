@@ -3,8 +3,12 @@
 Deploy NodeJS application on Azure.  
 https://nodeapponazure.azurewebsites.net/
 
-`URL:3000` will show books
-`URL:3000/admin` will add books to Cosmos DB
+`https://nodeapponazure.azurewebsites.net/` will show books
+
+- Bring data from Cosmos DB (MongoDB)
+- Bring images from Azure Blob Storage
+
+`https://nodeapponazure.azurewebsites.net/admin` will add books to Cosmos DB
 
 ## Dev Environment
 
@@ -40,7 +44,17 @@ https://nodeapponazure.azurewebsites.net/
   - node-app-on-azure-db > Quick Start => ConnectionString
   - node-app-on-azure-db > Networking => Restrict Access of DB
 
+## Setup Azure Blob Storage
+
+- Dashboard > Storage Account
+  - Storage Account Name: nodeapponazurestorageapp
+  - nodeapponazurestorageapp > Data Storage > Containers > Create Container > Name: 'book-cover'
+  - nodeapponazurestorageapp > Containers > book-cover > Upload images (Upload from sample-book-covers)
+    - nodeapponazurestorageapp > Properties > URL = Get the URL of the container
+    - nodeapponazurestorageapp > Overview > Change Access Level > Public Access Level: Blob
+
 ## Packages
 
 - env: https://github.com/motdotla/dotenv
 - mongodb: https://www.npmjs.com/package/mongodb
+- nodemon: https://www.npmjs.com/package/nodemon
